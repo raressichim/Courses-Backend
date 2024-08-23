@@ -1,0 +1,1284 @@
+{
+	"info": {
+		"_postman_id": "014f9f83-b828-4cd5-aab1-8664c19a7465",
+		"name": "devschool_project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31563262",
+		"_collection_link": "https://devschool-project-7606.postman.co/workspace/Devschool-project-Workspace~a02885c2-248e-4b6d-ae90-e4b93265a9c6/collection/31563262-014f9f83-b828-4cd5-aab1-8664c19a7465?action=share&source=collection_link&creator=31563262"
+	},
+	"item": [
+		{
+			"name": "testRequests",
+			"item": [
+				{
+					"name": "teacher",
+					"item": [
+						{
+							"name": "getTeachers",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtTeacher}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/teachers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"teachers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getPendingRequests",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyMSIsInJvbGVzIjpbIlRFQUNIRVIiXSwiaWF0IjoxNzE2ODM2MTg3LCJleHAiOjE3MTY4Mzc5ODd9.9qh58kOAVmIW3yn5iO-KfbitfzBYDgInVZV0atSbEyw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/teachers/me/requests",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"teachers",
+										"me",
+										"requests"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "acceptRequest",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyMSIsInJvbGVzIjpbIlRFQUNIRVIiXSwiaWF0IjoxNzE2ODM2MTg3LCJleHAiOjE3MTY4Mzc5ODd9.9qh58kOAVmIW3yn5iO-KfbitfzBYDgInVZV0atSbEyw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/enrolments/me/requests/1/accept",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"enrolments",
+										"me",
+										"requests",
+										"1",
+										"accept"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "rejectRequest",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyMSIsInJvbGVzIjpbIlRFQUNIRVIiXSwiaWF0IjoxNzE2ODI1MDEwLCJleHAiOjE3MTY4MjY4MTB9.RwTziPf0HkfiFyHQq3vHCS0KgOqo3HR2RmXNK0uC4cc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/enrolments/me/requests/2/refuse",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"enrolments",
+										"me",
+										"requests",
+										"2",
+										"refuse"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "gradeStudent",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyMSIsInJvbGVzIjpbIlRFQUNIRVIiXSwiaWF0IjoxNzE2ODI1MDEwLCJleHAiOjE3MTY4MjY4MTB9.RwTziPf0HkfiFyHQq3vHCS0KgOqo3HR2RmXNK0uC4cc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"grade\": 8.3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/grades/me/courses/1/students/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"grades",
+										"me",
+										"courses",
+										"1",
+										"students",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addCourse",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyMiIsInJvbGVzIjpbIlRFQUNIRVIiXSwiaWF0IjoxNzE2ODQwNzE2LCJleHAiOjE3MTY4NDI1MTZ9.QlCOG3cmrib7lw__84bsRIIpCFrDVEAW5CGsooH5J_0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"OOP5\",\r\n\t\"description\": \"...\",\r\n\t\"maxAttendees\": 15,\r\n    \"schedule\": [\r\n        {\r\n\t\t\t\"name\": \"COURSE\",\r\n\t\t\t\"startDate\": \"11.10.2023\",\r\n\t\t\t\"endDate\": \"01.12.2023\",\r\n\t\t\t\"weekDay\": \"MON\",\r\n\t\t\t\"startTime\": \"13:00\",\r\n\t\t\t\"endTime\": \"14:00\"\r\n\t\t}\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/courses/me",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"courses",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addLab",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtTeacher}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"ML\",\r\n    \"schedule\": \r\n\t\t{\r\n\t\t\t\"weekDay\": \"WED\",\r\n\t\t\t\"startTime\": \"15:00\",\r\n\t\t\t\"endTime\": \"17:00\"\r\n\t\t}\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/courses/labs/me",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"courses",
+										"labs",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCourses",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "disableCourse",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "student",
+					"item": [
+						{
+							"name": "getGrades",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyNiIsInJvbGVzIjpbIlRFQUNIRVIiXSwiaWF0IjoxNzE2ODExMTc1LCJleHAiOjE3MTY4MTE0NzV9.NKQMHLnwCvUP9HaFPovEThGtnMc8Lw_cNgPx0w61jnw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/students/users/2/grades",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"students",
+										"users",
+										"2",
+										"grades"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "enrol",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdHVkZW50MSIsInJvbGVzIjpbIlNUVURFTlQiXSwiaWF0IjoxNzE2ODM2NDgxLCJleHAiOjE3MTY4MzgyODF9.I_DCxpi4GqI2UMUrheCau1-Wo8U-X9VdiyIlwmmGuEc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n \"courseName\": \"OOP4\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/enrolments/me",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"enrolments",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getStudents",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyMSIsInJvbGVzIjpbIlRFQUNIRVIiXSwiaWF0IjoxNzE2ODI1MDEwLCJleHAiOjE3MTY4MjY4MTB9.RwTziPf0HkfiFyHQq3vHCS0KgOqo3HR2RmXNK0uC4cc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyMyIsInJvbGVzIjpbIlRFQUNIRVIiXSwiaWF0IjoxNzE2NjI5MDgzLCJleHAiOjE3MTY2MjkzODN9.LvlpRwY52jpxtf4OCjPuzrHkNIHoIXt1LkmTsnsiNvk",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/students",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"students"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getEnrolmentList",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/enrolments/users/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"enrolments",
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "add/getUsers & login",
+					"item": [
+						{
+							"name": "addUser",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\":\"x\",\r\n    \"lastName\":\"x\",\r\n    \"username\":\"student\",\r\n    \"password\":\"1234\",\r\n    \"role\":\"student\",\r\n    \"email\":\"aa@yahoo.com\"\r\n   \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUsers",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "loginTeacher",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"teacher2\",\r\n    \"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/users/sessions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"sessions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "loginStudent",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = pm.response.json();\r",
+											"\r",
+											"if (jsonData.jwt) {\r",
+											"    pm.environment.set(\"jwtStudent\", jsonData.jwt);\r",
+											"}"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"a\",\r\n    \"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/users/sessions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"sessions"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "scenarios",
+			"item": [
+				{
+					"name": "Happy Path",
+					"item": [
+						{
+							"name": "student",
+							"item": [
+								{
+									"name": "enrol",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{jwtStudent}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n \"courseName\": \"p\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/enrolments/me",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"enrolments",
+												"me"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getGrades",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{jwtStudent}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/api/students/me/grades",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"students",
+												"me",
+												"grades"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getEnrolmentList",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{jwtStudent}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/api/enrolments/me",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"enrolments",
+												"me"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "teacher",
+							"item": [
+								{
+									"name": "addCourse",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{jwtTeacher}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"p\",\r\n\t\"description\": \"...\",\r\n\t\"maxAttendees\": 15,\r\n    \"startYear\":2025,\r\n    \"endYear\":2026,\r\n    \"schedule\": [\r\n        {\r\n\t\t\t\"name\": \"COURSE\",\r\n\t\t\t\"startDate\": \"11.10.2023\",\r\n\t\t\t\"endDate\": \"01.12.2023\",\r\n\t\t\t\"weekDay\": \"MON\",\r\n\t\t\t\"startTime\": \"13:00\",\r\n\t\t\t\"endTime\": \"14:00\"\r\n\t\t}\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/courses/me",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"courses",
+												"me"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "disableCourse",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{jwtTeacher}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"p\",\r\n    \"startYear\":2025,\r\n    \"endYear\":2026\r\n\t\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/courses/me/disable",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"courses",
+												"me",
+												"disable"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getPendingRequests",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{jwtTeacher}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/api/teachers/me/requests",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"teachers",
+												"me",
+												"requests"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "acceptRequest",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{jwtTeacher}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/enrolments/me/requests/8/accept",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"enrolments",
+												"me",
+												"requests",
+												"8",
+												"accept"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "gradeStudent",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{jwtTeacher}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"grade\": 8.3,\r\n    \"studentId\":1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/grades/me/courses/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"grades",
+												"me",
+												"courses",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "addLab",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{jwtTeacher}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"AI\",\r\n    \"startYear\":2023,\r\n    \"endYear\":2024,\r\n    \"schedule\": \r\n\t\t{\r\n\t\t\t\"weekDay\": \"WED\",\r\n\t\t\t\"startTime\": \"15:00\",\r\n\t\t\t\"endTime\": \"17:00\",\r\n            \"groupName\":\"313AC\"\r\n\t\t}\r\n    \r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/courses/labs/me",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"courses",
+												"labs",
+												"me"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "rejectRequest",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{jwtTeacher}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/api/enrolments/me/requests/2/refuse",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"enrolments",
+												"me",
+												"requests",
+												"2",
+												"refuse"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getCourses",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{jwtTeacher}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"OOP\",\r\n\t\"description\": \"Oriented object programming basic\",\r\n\t\"maxAttendees\": 30,\r\n    \"schedule\": [\r\n\t\t{\r\n\t\t\t\"name\": \"course\",\r\n\t\t\t\"startDate\": \"11.01.2023\",\r\n\t\t\t\"endDate\": \"01.06.2023\",\r\n\t\t\t\"weekDay\": \"MON\",\r\n\t\t\t\"startTime\": \"10:00\",\r\n\t\t\t\"endTime\": \"12:00\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"laboratory\",\r\n\t\t\t\"startDate\": \"11.01.2023\",\r\n\t\t\t\"endDate\": \"01.06.2023\",\r\n\t\t\t\"weekDay\": \"TUE\",\r\n\t\t\t\"startTime\": \"13:00\",\r\n\t\t\t\"endTime\": \"15:00\"\r\n\t\t}\r\n\t]\r\n\r\n\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/courses",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"courses"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "addStudent",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\":\"x\",\r\n    \"lastName\":\"x\",\r\n    \"username\":\"student20252026\",\r\n    \"password\":\"1234\",\r\n    \"role\":\"student\",\r\n    \"email\":\"ff@yahoo.com\",\r\n    \"groupName\":\"AB\",\r\n    \"startYear\":2025,\r\n    \"endYear\":2026\r\n    \r\n   \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addTeacher",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\":\"x\",\r\n    \"lastName\":\"x\",\r\n    \"username\":\"teacherr\",\r\n    \"password\":\"1234\",\r\n    \"role\":\"teacher\",\r\n    \"email\":\"tar@yahoo.com\"\r\n   \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "loginTeacher",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = pm.response.json();\r",
+											"\r",
+											"if(jsonData.jwt){\r",
+											"    pm.environment.set(\"jwtTeacher\",jsonData.jwt)\r",
+											"}\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"teacherr\",\r\n    \"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/users/sessions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"sessions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "loginStudent",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = pm.response.json();\r",
+											"\r",
+											"if(jsonData.jwt){\r",
+											"    pm.environment.set(\"jwtStudent\",jsonData.jwt)\r",
+											"}"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"student20252026\",\r\n    \"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/users/sessions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"sessions"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "# Happy Path: Successful Workflow\n\nThis folder contains a series of API requests that demonstrate the complete \"happy path\" for managing students and teachers, course enrollment, and grading within the system.\n\n- **add student/teacher**\n    \n- **login student/teacher**\n    \n- **addCourse**\n    \n- **enrol**\n    \n- **accept/reject pending request**\n    \n- **grade student**\n    \n- **display grades/enrolments**"
+				},
+				{
+					"name": "Add/Login fail",
+					"item": [
+						{
+							"name": "addUser - unique ex",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\":\"x\",\r\n    \"lastName\":\"x\",\r\n    \"username\":\"student41\",\r\n    \"password\":\"1234\",\r\n    \"role\":\"student\",\r\n    \"email\":\"a@yahoo.com\",\r\n    // \"groupName\":\"222AC\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login - invalid credentials",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = pm.response.json();\r",
+											"\r",
+											"if(jsonData.jwt){\r",
+											"    pm.environment.set(\"jwtTeacher\",jsonData.jwt)\r",
+											"}"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"teacher2\",\r\n    \"password\":\"123g4\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/users/sessions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"sessions"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "# Error Handling Workflow\n\nThis folder contains a series of API requests that illustrate the error handling mechanisms of the system when add and login operations fail.\n\n- duplicate email\n    \n- duplicate username\n    \n- invalid credentials\n    \n- invalid role\n    \n- invalid email\n    \n- user not found\n    \n- invalid input format"
+				}
+			]
+		}
+	]
+}

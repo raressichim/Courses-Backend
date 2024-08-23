@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/devschool_project
+    username: devschool_project
+    password: devschool
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
+    defer-datasource-initialization: true # Ensure the script is run only after Hibernate creates the database
+  sql.init: # todo - delete
+    mode: always
+    data-locations: classpath:test.sql
+
+
+logging.level.org.hibernate:
+  SQL: DEBUG
+  type: TRACE
+
+logging.level.org.springframework.security: DEBUG
+
+jwt:
+  ttlInMinutes: 30
+  secret: jnu9vWV8GTwm9Zk4kVilc9RH+pmj5WqCkYONQYfO3dY=
